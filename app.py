@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_festivals')
 def get_festivals():
-    return render_template("index.html", festivals=mongo.db.festivals.find())
+    return render_template("festivals.html", festivals=mongo.db.festivals.find())
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

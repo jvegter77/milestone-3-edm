@@ -28,10 +28,13 @@
     </div>
 </header>
 <body>
-    <div class="container">
-        <h1>Welcom to EDM Source</h1>
-        <p>EDM Source is created for you, the EDM fan. Here you can add festivals to our festival list, upload pictures and videos of festivals and share your tips with other fans.</p>
-    </div>
+    {% for festivals in festivals %}
+        {{festivals.festivalname}}
+        {{festivals.date}}
+        {{festivals.location}}
+        {{festivals.website}}
+        {{festivals.tickets}}
+    {% endfor %}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
