@@ -10,8 +10,6 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-gdxlz.mong
 
 mongo = PyMongo(app)
 
-
-
 @app.route('/')
 @app.route('/get_festivals')
 def get_festivals():
