@@ -10,7 +10,7 @@
     <title>Festivals</title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">EDM Source</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,6 +28,10 @@
     </div>
 </header>
 <body>
+    <div class="container">
+        <h1>Welcom to EDM Source</h1>
+        <p>EDM Source is created for you, the EDM fan. Here you can add festivals to our festival list, upload pictures and videos of festivals and share your tips with other fans.</p>
+    </div>
     {% for festivals in festivals %}
         {{festivals.festivalname}}
         {{festivals.date}}
