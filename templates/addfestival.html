@@ -6,41 +6,46 @@
 </div>
 
 <div class="container">
-    <form action="" method="POST" class="col s12">
+    <form action="{{ url_for('insert_festival') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">beach_access</i>
-                <input id="festivalname" type="text" class="validate">
+                <input id="festivalname" name="festivalname" type="text" class="validate">
                 <label for="festivalname">Festival name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">today</i>
-                <input id="date" type="text" class="datepicker">
+                <input id="date" name="date" type="text" class="datepicker">
                 <label for="date">What's the day?</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">edit_location</i>
-                  <input id="location" type="text" class="validate">
+                  <input id="location" name="location" type="text" class="validate">
                   <label for="location">Location</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">web</i>
-                  <input id="website" type="text" class="validate">
+                  <input id="website" name="website" type="text" class="validate">
                   <label for="website">Website</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">store</i></i>
-                  <input id="ticket-link" type="text" class="validate">
-                  <label for="ticket-link">Ticket link</label>
+                  <input id="tickets" name="tickets" type="text" class="validate">
+                  <label for="tickets">Ticket link</label>
             </div>
+        </div>
+        <div class="row">
+         <button class="btn waves-effect waves-light" type="submit" name="action">Add
+            <i class="material-icons right">send</i>
+            </button>
         </div>
     </form>
 </div>

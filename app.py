@@ -10,6 +10,12 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-gdxlz.mong
 
 mongo = PyMongo(app)
 
+
+
+@app.route('/')
+def get_index():
+    return render_template('index.html')
+
 @app.route('/get_festivals')
 def get_festivals():
     return render_template("festivals.html", festivals=mongo.db.festivals.find())
@@ -17,6 +23,12 @@ def get_festivals():
 @app.route('/add_festival')
 def add_festival():
     return render_template('addfestival.html')
+    
+@app.route('/insert_festival', methods=['POST'])
+def insert_festival():
+    festivals = mongo.db.festivals
+    festivals.insert_one(request.form.to_dict())
+    return redirect(url_for('get_festivals'))
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
