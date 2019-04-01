@@ -14,6 +14,10 @@ mongo = PyMongo(app)
 def get_festivals():
     return render_template("festivals.html", festivals=mongo.db.festivals.find())
     
+@app.route('/add_festival')
+def add_festival():
+    return render_template('addfestival.html')
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
