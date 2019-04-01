@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     <title>Festivals</title>
 </head>
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Your festivals</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#">Add a festival</a>
-              <a class="nav-item nav-link" href="#">Edit a festival</a>
-            </div>
-      </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Your festivals</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">View Festivals</a></li>
+              <li><a href="#">Add or change a festival</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
     <div id="mainheader">
         <img src="static/images/mysterland.jpg" alt="overview of mysteryland">
     </div>
@@ -31,5 +31,11 @@
     {% endblock %}
     <script type="text/javascript" src="static/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        const Calendar = document.querySelector('.datepicker');
+        M.Datepicker.init(Calendar,{
+            format:'dd/mm/yyyy'
+        });
+    </script>
 </body>
 </html>
