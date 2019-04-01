@@ -8,19 +8,19 @@
 <div class="container">
     <div class="row">
         {% for festivals in festivals %}
-        <div class="row col s12 intro">
+        <div class="row col s12 m12 intro">
             {{festivals.festivalname}}
         </div>
-        <div class="row col s6">
+        <div class="row col s12 m6 l6" id="festivalinfo">
             {{festivals.date}}
         </div>
-        <div class="row col s6">
+        <div class="row col s12 m6 l6" id="festivalinfo">
             {{festivals.location}}
         </div>
-        <div class="row col s6">
+        <div class="row col s12 m6 l6" id="festivalinfo">
             {{festivals.website}}
         </div>
-        <div class="row col s6">
+        <div class="row col s12 m6 l6" id="festivalinfo">
             {{festivals.tickets}}
         </div>
         {% endfor %}
