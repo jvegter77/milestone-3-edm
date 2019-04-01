@@ -6,23 +6,25 @@
 </div>
 
 <div class="container">
-    {% for festivals in festivals %}
-    <div class="row" col s6>
-        {{festivals.festivalname}}
-    </div>
     <div class="row">
-        {{festivals.date}}
+        {% for festivals in festivals %}
+        <div class="row col s12 intro">
+            {{festivals.festivalname}}
+        </div>
+        <div class="row col s6">
+            {{festivals.date}}
+        </div>
+        <div class="row col s6">
+            {{festivals.location}}
+        </div>
+        <div class="row col s6">
+            {{festivals.website}}
+        </div>
+        <div class="row col s6">
+            {{festivals.tickets}}
+        </div>
+        {% endfor %}
     </div>
-    <div class="row">
-        {{festivals.location}}
-    </div>
-    <div class="row">
-        {{festivals.website}}
-    </div>
-    <div class="row">
-        {{festivals.tickets}}
-    </div>
-    {% endfor %}
 </div>
 
 {% endblock %}
