@@ -11,20 +11,26 @@
         {% for festivals in festivals %}
         <div class="row col s12 m12 intro">
            <h2>{{festivals.festivalname}}</h2>
+           <hr>
         </div>
         <div class="row col s12 m6 l6" id="festivalinfo">
-            <h3>Start date: {{festivals.startdate}}</h3>
+            <h3>Start date:</h3> 
+            {{festivals.startdate}}
         </div>
         <div class="row col s12 m6 l6" id="festivalinfo">
-            <h3>End date: {{festivals.enddate}}</h3>
+            <h3>End date:</h3>
+            {{festivals.enddate}}
         </div>
         <div class="row col s12 m6 l6" id="festivalinfo">
+            <h3>Location:</h3>
             {{festivals.location}}
         </div>
         <div class="row col s12 m6 l6" id="festivalinfo">
+            <h3>Info:</h3>
             <a href="{{festivals.website}}" target="_blank">Main festival website</a>
         </div>
         <div class="row col s12 m6 l6" id="festivalinfo">
+            <h3>Tickets:</h3>
             <a href="{{festivals.tickets}}" target="_blank">tickets</a>
         </div>
         {% endfor %}
