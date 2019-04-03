@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1>The festivals our users have added</h1>
-    <p>Is the info incorrect? Please edit the festival!</p>
+    <p>Is the info incorrect? Please edit the festival with the edit button!</p>
 </div>
 
 <div class="container">
@@ -32,6 +32,9 @@
         <div class="row col s12 m6 l6" id="festivalinfo">
             <h3>Tickets:</h3>
             <a href="{{festivals.tickets}}" target="_blank">tickets</a>
+        </div>
+        <div class="row col s12">
+            <a class="waves-effect waves-light btn">Edit</a>
         </div>
         {% endfor %}
     </div>
