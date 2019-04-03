@@ -34,7 +34,7 @@
             <a href="{{festivals.tickets}}" target="_blank">tickets</a>
         </div>
         <div class="row col s12">
-            <a class="waves-effect waves-light btn">Edit</a>
+            <a href="{{ url_for('edit_festival', festivals_id=festivals._id) }}" class="waves-effect waves-light btn">Edit</a>
         </div>
         {% endfor %}
     </div>
