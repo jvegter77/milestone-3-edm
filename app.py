@@ -28,11 +28,13 @@ def insert_festival():
     festivals.insert_one(request.form.to_dict())
     return redirect(url_for('get_festivals'))
 
-@app.route('/edit_festival/<festivals_id>')
-def edit_festival(festivals_id):
-    festivals = mongo.db.festivals.find_one({'_id': ObjectId(festivals_id)})
-    all_festivals = mongo.db.festivals.find()
-    return render_template('editfestival.html')
+@app.route('/edit_festival/<festival_id>')
+def edit_festival(festival_id):
+    the_festival = mongo.db.festivals.find_one({'_id': ObjectId(festival_id)})
+    return render_template('editfestival.html', festival=the_festival)
+    
+
+    
       
 
 if __name__ == '__main__':

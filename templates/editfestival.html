@@ -10,42 +10,40 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">beach_access</i>
-                <input id="festivalname" name="festivalname" type="text" class="validate">
+                <input id="festivalname" name="festivalname" type="text" class="validate" value="{{festival.festivalname}}">
                 <label for="festivalname">Festival name</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <i class="material-icons prefix">today</i>
-                <input id="startdate" name="startdate" type="text" class="datepicker">
+                <input id="startdate" name="startdate" type="text" class="datepicker" value="{{festival.startdate}}">
                 <label for="startdate">When does it start?</label>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <i class="material-icons prefix">today</i>
-                <input id="enddate" name="enddate" type="text" class="datepicker">
+                <input id="enddate" name="enddate" type="text" class="datepicker" value="{{festival.enddate}}">
                 <label for="enddate">When does it end?</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">edit_location</i>
-                  <input id="location" name="location" type="text" class="validate">
+                  <input id="location" name="location" type="text" class="validate" value="{{festival.location}}">
                   <label for="location">Location</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">web</i>
-                  <input id="website" name="website" type="text" class="validate">
+                  <input id="website" name="website" type="text" class="validate" value="{{festival.website}}">
                   <label for="website">Website</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">store</i></i>
-                  <input id="tickets" name="tickets" type="text" class="validate">
+                  <input id="tickets" name="tickets" type="text" class="validate" value="{{festival.tickets}}">
                   <label for="tickets">Ticket link</label>
             </div>
         </div>
