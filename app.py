@@ -33,9 +33,20 @@ def edit_festival(festival_id):
     the_festival = mongo.db.festivals.find_one({'_id': ObjectId(festival_id)})
     return render_template('editfestival.html', festival=the_festival)
     
+@app.route('/update_festival/<festival_id>', methods=["POST"])
+def update_festival(festival_id):
+    festivals = mongo.db.festivals
+    festivals.update( {'_id': ObjectId(festival_id)},
+    {
+        'festivalname': request.form.get('festivalname'),
+        'startdate': request.form.get('startdate'),
+        'endate': request.form.get('enddate'),
+        'location': request.form.get('location'),
+        'website': request.form.get('website'),
+        'tickets': request.form.get('tickets')
+    })
+    return redirect(url_for('get_festivals'))
 
-    
-      
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
