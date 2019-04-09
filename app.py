@@ -43,7 +43,8 @@ def update_festival(festival_id):
         'enddate': request.form.get('enddate'),
         'location': request.form.get('location'),
         'website': request.form.get('website'),
-        'tickets': request.form.get('tickets')
+        'tickets': request.form.get('tickets'),
+        'image': request.form.get('image')
     })
     return redirect(url_for('get_festivals'))
     
