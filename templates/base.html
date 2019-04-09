@@ -14,8 +14,9 @@
     <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
-            <a href="{{ url_for('get_index') }}" class="brand-logo">Your festivals</a>
-            <ul class="right hide-on-med-and-down">
+                <i class="fas fa-align-justify" id="navbartoggler"></i>
+                <a href="{{ url_for('get_index') }}" class="brand-logo">Your festivals</a>
+            <ul class="right hide-on-med-and-down" id="navigation">
                 <li><a href="{{ url_for('get_index') }}">Home</a></li>
                 <li><a href="{{ url_for('get_festivals') }}">View Festivals</a></li>
                 <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
@@ -23,6 +24,14 @@
             </ul>
           </div>
         </nav>
+    </div>
+    <div class="mobilenav">
+        <ul class="mobilenav" id="navigation">
+            <li><a href="{{ url_for('get_index') }}">Home</a></li>
+            <li><a href="{{ url_for('get_festivals') }}">View Festivals</a></li>
+            <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
     </div>
 </header>
 <body>
