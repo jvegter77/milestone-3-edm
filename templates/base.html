@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    
     <title>Festivals</title>
 </head>
 <header>
@@ -17,9 +16,10 @@
           <div class="nav-wrapper">
             <a href="{{ url_for('get_index') }}" class="brand-logo">Your festivals</a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('get_festivals') }}">View Festivals</a></li>
-              <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
-              <li><a href="#">Login</a></li>
+                <li><a href="{{ url_for('get_index') }}">Home</a></li>
+                <li><a href="{{ url_for('get_festivals') }}">View Festivals</a></li>
+                <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
             </ul>
           </div>
         </nav>
@@ -31,7 +31,7 @@
 <body>
     {% block content %}
     {% endblock %}
-    <script src="static/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
 </body>
 </html>

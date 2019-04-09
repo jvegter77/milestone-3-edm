@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, flash, render_template, redirect, request, url_for, session, abort
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -40,12 +40,16 @@ def update_festival(festival_id):
     {
         'festivalname': request.form.get('festivalname'),
         'startdate': request.form.get('startdate'),
-        'endate': request.form.get('enddate'),
+        'enddate': request.form.get('enddate'),
         'location': request.form.get('location'),
         'website': request.form.get('website'),
         'tickets': request.form.get('tickets')
     })
     return redirect(url_for('get_festivals'))
+    
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
