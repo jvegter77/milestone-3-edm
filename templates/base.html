@@ -13,9 +13,8 @@
 <header>
     <div class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper">
+            <div class="nav-wrapper">
                 <i class="fas fa-align-justify" id="navbartoggler"></i>
-                <i class="fas fa-times" id="navclose"></i>
                 <a href="{{ url_for('get_index') }}" class="brand-logo">Your festivals</a>
             <ul class="right hide-on-med-and-down" id="navigation">
                 <li><a href="{{ url_for('get_index') }}">Home</a></li>
@@ -23,16 +22,22 @@
                 <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
                 <li><a href="{{ url_for('login') }}">Login</a></li>
             </ul>
-          </div>
+            </div>
         </nav>
     </div>
-    <div class="mobilenav" id="navigation">
-        <ul class="mobilenav">
-            <li><a href="{{ url_for('get_index') }}">Home</a></li>
-            <li><a href="{{ url_for('get_festivals') }}">View Festivals</a></li>
-            <li><a href="{{ url_for('add_festival') }}">Add a festival</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-        </ul>
+    <div class="container mobilenav" id="mobilenav">
+        <div class="row">
+           <a href="{{ url_for('get_index') }}">Home</a> 
+        </div>
+        <div class="row">
+           <a href="{{ url_for('get_festivals') }}">View Festivals</a> 
+        </div>
+        <div class="row">
+            <a href="{{ url_for('add_festival') }}">Add a festival</a>
+        </div>
+        <div class="row">
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
     </div>
 </header>
 <body>

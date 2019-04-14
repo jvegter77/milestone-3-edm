@@ -55,6 +55,7 @@ h3 {
     height: 650px;
 }
 
+
 .mobilenav {
         display: none;
     }
@@ -63,8 +64,8 @@ h3 {
     #navbartoggler {
         display: none;
     }
-    #navclose {
-        display:none;
+    .mobilenav {
+        display: none;
     }
 }
 
