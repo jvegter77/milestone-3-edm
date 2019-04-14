@@ -7,6 +7,22 @@
 <div class="container">
     <h1>Please login to your account</h1>
 </div>
+<div class="container">
+    <form action="" method="post">
+    <div class="row col s6 m6 l6 xl6">
+        <input type="text" placeholder="Username" name="username" value="{{
+                  request.form.username }}">
+    </div>
+    <div class="row col s6 m6 l6 xl6">
+        <input type="password" placeholder="Password" name="password" value="{{
+              request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+          </form>
+          {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+          {% endif %}
+    </div>
+</div>
 
 
 
