@@ -16,7 +16,7 @@ def get_index():
 
 @app.route('/get_festivals')
 def get_festivals():
-    return render_template('festivals.html', festivals=mongo.db.festivals.find())
+    return render_template('festivals.html', festivals=mongo.db.festivals.find().sort('_id',1))
     
 @app.route('/add_festival')
 def add_festival():
