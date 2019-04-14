@@ -69,3 +69,13 @@ h3 {
     }
 }
 
+#button {
+    margin-top:20px;
+}
+
+@media only screen and (max-width: 1526px){
+    #strange {
+        margin-left: 0px !important;
+    }
+}
+

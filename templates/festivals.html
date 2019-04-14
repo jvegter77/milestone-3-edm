@@ -13,34 +13,34 @@
 <div class="container">
     <div class="row">
         {% for festivals in festivals %}
-        <div class="row col s12 m12 intro">
+        <div class="row col s12 m12 l12 xl12 intro">
            <h2>{{festivals.festivalname}}</h2>
            <hr>
         </div>
-        <div class="row col s12 m12" id="festivalbanner">
+        <div class="row col s12 m12 l12 xl6" id="festivalbanner">
             <img src="{{festivals.image}}" alt="image of {{festivals.festivalname}}">
         </div>
-        <div class="row col s12 m6 l6" id="festivalinfo">
+        <div class="row col s6 m6 l6 xl3" id="festivalinfo">
             <h3>Start date:</h3> 
             {{festivals.startdate}}
         </div>
-        <div class="row col s12 m6 l6" id="festivalinfo">
+        <div class="row col s6 m6 l6 xl3" id="festivalinfo">
             <h3>End date:</h3>
             {{festivals.enddate}}
         </div>
-        <div class="row col s12 m6 l6" id="festivalinfo">
+        <div class="row col s12 m12 l12 xl6" id="festivalinfo">
             <h3>Location:</h3>
             {{festivals.location}}
         </div>
-        <div class="row col s12 m6 l6" id="festivalinfo">
+        <div class="row col s12 m6 l6 xl3" id="festivalinfo strange">
             <h3>Info:</h3>
             <a href="{{festivals.website}}" target="_blank">Main festival website</a>
         </div>
-        <div class="row col s12 m6 l6" id="festivalinfo">
+        <div class="row col s12 m6 l6 xl3" id="festivalinfo">
             <h3>Tickets:</h3>
             <a href="{{festivals.tickets}}" target="_blank">tickets</a>
         </div>
-        <div class="row col s12">
+        <div class="row col s12 m6 l6 xl6 offset-xl6" id="button">
             <a href="{{ url_for('edit_festival', festival_id=festivals._id) }}" class="waves-effect waves-light btn">Edit</a>
         </div>
         {% endfor %}
