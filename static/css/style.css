@@ -58,7 +58,19 @@ h3 {
 
 .mobilenav {
         display: none;
-    }
+}
+
+.navelement {
+    background-color: blue;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navelement a {
+    color: white;
+}
 
 @media only screen and (min-width: 992px) {
     #navbartoggler {
@@ -73,9 +85,5 @@ h3 {
     margin-top:20px;
 }
 
-@media only screen and (max-width: 1526px){
-    #strange {
-        margin-left: 0px !important;
-    }
-}
+
 
