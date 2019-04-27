@@ -2,6 +2,7 @@ import os
 from flask import Flask, flash, render_template, redirect, request, url_for, session, abort
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
