@@ -11,40 +11,39 @@
 
 <div class="container">
     <div class="row">
-        {% for festivals in festivals %}
-        <div class="row col s12 m12 l12 xl12 intro">
-           <h2>{{festivals.festivalname}}</h2>
+        {% for members in members %}
+        <h2>Not {{members.username}}</h2>
+        <div class="row col s12 m12 l12 xl12 intro" id="username">
+           <h2>Username</h2>
+           {{ members.username }}
            <hr>
         </div>
-        <div class="row col s12 m12 l12 xl6" id="festivalbanner">
-            <img src="{{festivals.image}}" alt="image of {{festivals.festivalname}}">
+        <div class="row col s12 m12 l12 xl6" id="userfirstname">
+            <h3>Fist name</h3>
+            {{ members.firstname }}
         </div>
-        <div class="row col s6 m6 l6 xl3" id="festivalinfo">
-            <h3>Start date:</h3> 
-            {{festivals.startdate}}
+        <div class="row col s6 m6 l6 xl3" id="userlastname">
+            <h3>Last Name</h3> 
+            {{ members.lastname }}
         </div>
-        <div class="row col s6 m6 l6 xl3" id="festivalinfo">
-            <h3>End date:</h3>
-            {{festivals.enddate}}
+        <div class="row col s6 m6 l6 xl3" id="useremail">
+            <h3>Email</h3>
+            {{members.email}}
         </div>
-        <div class="row col s12 m12 l12 xl6" id="festivalinfo">
-            <h3>Location:</h3>
-            {{festivals.location}}
+        <div class="row col s12 m12 l12 xl6" id="usercountry">
+            <h3>Country</h3>
+            {{members.country}}
         </div>
-        <div class="row col s12 m6 l6 xl3" id="festivalinfo strange">
-            <h3>Info:</h3>
-            <a href="{{festivals.website}}" target="_blank">Main festival website</a>
+        <div class="row col s12 m12 l12 xl6" id="usercountry">
+            <h3>City</h3>
+            {{members.city}}
         </div>
-        <div class="row col s12 m6 l6 xl3" id="festivalinfo">
-            <h3>Tickets:</h3>
-            <a href="{{festivals.tickets}}" target="_blank">tickets</a>
-        </div>
-        <div class="row col s12 m12 l12 xl12" id="festivalinfo">
-            <h3>Why go?</h3>
-            {{festivals.comment}}
+        <div class="row col s12 m12 l12 xl6" id="usercountry">
+            <h3>Birthday</h3>
+            {{members.birthdate}}
         </div>
         <div class="row col s12 m6 l6 xl6 offset-xl6" id="button">
-            <a href="{{ url_for('edit_festival', festival_id=festivals._id) }}" class="waves-effect waves-light btn">Edit</a>
+            
         </div>
         {% endfor %}
     </div>
