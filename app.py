@@ -1,13 +1,15 @@
 import os
-from flask import Flask, flash, render_template, redirect, request, url_for, session, abort
+from flask import Flask, flash, render_template, redirect, request, url_for, session, abort, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
+from werkzeug.security import check_password_hash
 
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'milestone3_edm'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-gdxlz.mongodb.net/milestone3_edm?retryWrites=true'
+app.secret_key = 'G0-Èl@E'
 
 mongo = PyMongo(app)
 
@@ -49,10 +51,18 @@ def update_festival(festival_id):
         'comment': request.form.get('comment')
     })
     return redirect(url_for('get_festivals'))
-    
+
 @app.route('/login')
 def login():
+    if 'username' in session:
+        return 'You are logged in as' + session['username']
+    
     return render_template('login.html')
+    
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
