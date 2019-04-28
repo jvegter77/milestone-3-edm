@@ -12,33 +12,32 @@
 <div class="container">
     <div class="row">
         {% for members in members %}
-        <h2>Not {{members.username}}</h2>
+        <h2>Not {{members.username}}? Log out</h2>
         <div class="row col s12 m12 l12 xl12 intro" id="username">
-           <h2>Username</h2>
+           <h3>Username</h3>
            {{ members.username }}
-           <hr>
         </div>
-        <div class="row col s12 m12 l12 xl6" id="userfirstname">
+        <div class="row col s6 m6 l6 xl6" id="userfirstname">
             <h3>Fist name</h3>
             {{ members.firstname }}
         </div>
-        <div class="row col s6 m6 l6 xl3" id="userlastname">
+        <div class="row col s6 m6 l6 xl6" id="userlastname">
             <h3>Last Name</h3> 
             {{ members.lastname }}
         </div>
-        <div class="row col s6 m6 l6 xl3" id="useremail">
+        <div class="row col s12 m12 l12 xl12" id="useremail">
             <h3>Email</h3>
             {{members.email}}
         </div>
-        <div class="row col s12 m12 l12 xl6" id="usercountry">
+        <div class="row col s6 m6 l6 xl6" id="usercountry">
             <h3>Country</h3>
             {{members.country}}
         </div>
-        <div class="row col s12 m12 l12 xl6" id="usercountry">
+        <div class="row col s6 m6 l6 xl6" id="usercountry">
             <h3>City</h3>
             {{members.city}}
         </div>
-        <div class="row col s12 m12 l12 xl6" id="usercountry">
+        <div class="row col s12 m12 l12 xl12" id="usercountry">
             <h3>Birthday</h3>
             {{members.birthdate}}
         </div>
