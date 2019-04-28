@@ -54,6 +54,10 @@ def update_festival(festival_id):
 def login():
     return render_template('login.html')
     
+@app.route('/register_succes')
+def register_succes():
+    return render_template('register_succes.html')
+    
 @app.route('/register')
 def register():
     return render_template('register.html')
@@ -66,7 +70,7 @@ def get_member():
 def add_member():
     members = mongo.db.members
     members.insert_one(request.form.to_dict())
-    return redirect(url_for('login'))
+    return redirect(url_for('register_succes'))
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
