@@ -67,6 +67,17 @@
             </div>
         </div>
         <div class="row">
+            <div class="input-field col s12">
+                    <select multiple id="dance_style" name="dance_styles" class="array">
+                      <option value="" disabled selected>Choose styles(you may select multiple)</option>
+                      {% for style in styles  %}
+                            <option value="{{style.dance_style}}">{{style.dance_style}}</option>
+                      {% endfor %}
+                    </select>
+                <label>Dance Styles at this festival</label>
+            </div>
+        </div>
+        <div class="row">
          <button class="btn waves-effect waves-light" type="submit" name="action">Add<i class="material-icons right">send</i>
             </button>
         </div>

@@ -21,9 +21,10 @@ def get_festivals():
     
 @app.route('/add_festival')
 def add_festival():
-    return render_template('addfestival.html')
+    return render_template('addfestival.html',
+    styles = mongo.db.dance_styles.find())
     
-@app.route('/insert_festival', methods=['POST'])
+@app.route('/insert_festival', methods=['POST', 'GET'])
 def insert_festival():
     festivals = mongo.db.festivals
     festivals.insert_one(request.form.to_dict())
