@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'milestone3_edm'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-gdxlz.mongodb.net/milestone3_edm?retryWrites=true'
-app.secret_key = 'G0-Èl@E'
+app.config['SECRET_KEY'] = 'kn[QtۅRLF'
 
 mongo = PyMongo(app)
 
@@ -49,29 +49,7 @@ def update_festival(festival_id):
         'comment': request.form.get('comment')
     })
     return redirect(url_for('get_festivals'))
-    
-@app.route('/login')
-def login():
-    return render_template('login.html')
-    
-@app.route('/register_succes')
-def register_succes():
-    return render_template('register_succes.html')
-    
-@app.route('/register')
-def register():
-    return render_template('register.html')
-    
-@app.route('/get_member')
-def get_member():
-    return render_template('memberpage.html', members=mongo.db.members.find())
-    
-@app.route('/add_member', methods=['POST'])
-def add_member():
-    members = mongo.db.members
-    members.insert_one(request.form.to_dict())
-    return redirect(url_for('register_succes'))
-    
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
